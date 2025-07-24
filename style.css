@@ -1,7 +1,13 @@
 :root {
   --bg: #111827;
-  --txt: #fff;
+  /* --txt: #fffaf0; */
+  --txt: #e7e8e2;
   --accent: #01c16a;
+
+  --card-bg: #1f2937;
+  --btn-bg: #01c16a;
+  --btn-txt: #111827;
+  --form-bg: #1e293b;
 }
 
 * {
@@ -13,7 +19,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   background: var(--bg);
@@ -36,7 +41,8 @@ ol {
 nav {
   position: fixed;
   padding: 50px 30px;
-  border-right: 1px solid var(--txt);
+  /* border-right: 1px solid var(--txt); */
+  box-shadow: -6px 0 10px 0px var(--txt);
   width: 16rem;
   text-align: center;
   height: 100vh;
@@ -72,10 +78,10 @@ nav {
   color: var(--accent);
 }
 
-.menu a.active, .menu a:hover {
+.menu a.active,
+.menu a:hover {
   color: var(--accent);
 }
-
 
 .menu ul li {
   margin: 32px 0;
@@ -128,31 +134,253 @@ section {
 }
 
 /* Section colors */
+section {
+  background: var(--bg);
+}
+
+/*  */
+
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg);
+  color: var(--txt);
+  line-height: 1.6;
+} */
+
+/* -------------------- HOME SECTION -------------------- */
 #home {
-  background: #f4a261;
-}
-#skill {
-  background: #2a9d8f;
-}
-#contact {
-  background: #e76f51;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  background-color: #0f172a;
 }
 
-/* Highlight current section via :target */
-/* section:target ~ .menu a[href="#home"],
-section:target ~ .menu a[href="#skill"],
-section:target ~ .menu a[href="#contact"]{
-  color: var(--accent) !important;
-} */
+.home-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  width: 100%;
+}
 
-/* section:target ~ nav a[href="#"]:not([href="#"]) {
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--accent);
+}
+
+.home-right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-right p {
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+.btn-resume {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-txt);
+  text-decoration: none;
   font-weight: bold;
-} */
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
 
-/* nav:has(#home:target) a[href="#home"],
-nav:has(#skill:target) a[href="#skill"],
-nav:has(#contact:target) a[href="#contact"] {
+.btn-resume:hover {
+  background-color: #00a85a;
+}
+
+/* -------------------- SKILLS & PROJECTS SECTION -------------------- */
+#skill {
+  padding: 4rem;
+  background-color: #0d1b2a;
+}
+
+.skills-projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills h2,
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
   color: var(--accent);
-} */
+}
+
+/* Skill Bars */
+.skill-bar {
+  margin-bottom: 1rem;
+}
+
+.skill-bar label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #2e3b4e;
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--accent);
+}
+
+/* Skill Badges */
+.skill-badges {
+  margin-top: 2rem;
+}
+
+.skill-badges span {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--btn-txt);
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Projects */
+.projects {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  width: calc(33.333% - 1.3rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  height: 200px;
+}
+
+.project-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.btn-project {
+  background-color: var(--btn-bg);
+  color: var(--btn-txt);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-project:hover {
+  background-color: #00a85a;
+}
+
+/* -------------------- CONTACT SECTION -------------------- */
+#contact {
+  padding: 4rem;
+  background-color: #1e293b;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.contact-info p,
+.contact-info a {
+  font-size: 1rem;
+  color: var(--txt);
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.social-links a {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.contact-form {
+  flex: 1;
+  background-color: var(--form-bg);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  background-color: #334155;
+  border: none;
+  color: var(--txt);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: var(--btn-bg);
+  color: var(--btn-txt);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #00a85a;
+}
 
 /*  */
