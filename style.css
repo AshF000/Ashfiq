@@ -1,86 +1,158 @@
-:root{
-    --bg: #111827;
-    --txt: #fff;
-    --accent: #01c16a;
+:root {
+  --bg: #111827;
+  --txt: #fff;
+  --accent: #01c16a;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background: var(--bg);
-    color: var(--txt);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
-a{
-    text-decoration: none;
-    color: var(--txt);
+
+body {
+  background: var(--bg);
+  color: var(--txt);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-ul, ol{
-    list-style-type: none;
+a {
+  text-decoration: none;
+  color: var(--txt);
 }
 
+ul,
+ol {
+  list-style-type: none;
+}
 
 /* nav */
-nav{
-    padding: 50px 30px;
-    border-right: 1px solid var(--txt);
-    max-width: 16rem;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+nav {
+  position: fixed;
+  padding: 50px 30px;
+  border-right: 1px solid var(--txt);
+  width: 16rem;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: #091328;
 }
 
-.logo a{
-    font-size: 42px;
-    position: relative;
+.logo a {
+  font-size: 42px;
+  position: relative;
 }
 
-.logo a span{
-    height: 8px;
-    width: 8px;
-    background: var(--txt);
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0;
-    right: -8px;
+.logo a span {
+  height: 8px;
+  width: 8px;
+  background: var(--txt);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: -8px;
 }
 
-.menu a{
-    font-size: 22px;
-    transition: all 0.15s ease-in-out;
+.menu a {
+  font-size: 22px;
+  transition: all 0.15s ease-in-out;
 }
 
-.menu a::after, .menu a:hover{
-    color: var(--accent);
+.menu a:active,
+.menu a:hover {
+  color: var(--accent);
 }
 
-.menu ul li{
-    margin: 32px 0;
+.menu a.active, .menu a:hover {
+  color: var(--accent);
 }
 
-.socials{
-    width: 100%;
+
+.menu ul li {
+  margin: 32px 0;
+}
+
+.socials {
+  width: 100%;
 }
 
 .socials ul {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.socials ul li a i{
-    font-size: 28px;
-    transition: transform 0.2s ease-in-out;
+.socials ul li a i {
+  font-size: 28px;
+  transition: transform 0.2s ease-in-out;
 }
 
-.socials ul li a:hover i{
-    transform: translateY(-30%);
+.socials ul li a:hover i {
+  transform: translateY(-30%);
 }
+
+#skill {
+  height: 100vh;
+}
+
+#contact {
+  height: 100vh;
+}
+
+main {
+  margin-left: 16rem;
+  background: red;
+  height: 100vh;
+  width: calc(100% - 16rem);
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+/*  */
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* Section colors */
+#home {
+  background: #f4a261;
+}
+#skill {
+  background: #2a9d8f;
+}
+#contact {
+  background: #e76f51;
+}
+
+/* Highlight current section via :target */
+/* section:target ~ .menu a[href="#home"],
+section:target ~ .menu a[href="#skill"],
+section:target ~ .menu a[href="#contact"]{
+  color: var(--accent) !important;
+} */
+
+/* section:target ~ nav a[href="#"]:not([href="#"]) {
+  font-weight: bold;
+} */
+
+/* nav:has(#home:target) a[href="#home"],
+nav:has(#skill:target) a[href="#skill"],
+nav:has(#contact:target) a[href="#contact"] {
+  color: var(--accent);
+} */
+
+/*  */
