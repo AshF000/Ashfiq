@@ -1,5 +1,86 @@
+:root{
+    --bg: #111827;
+    --txt: #fff;
+    --accent: #01c16a;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    background: var(--bg);
+    color: var(--txt);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--txt);
+}
+
+ul, ol{
+    list-style-type: none;
+}
+
+
+/* nav */
+nav{
+    padding: 50px 30px;
+    border-right: 1px solid var(--txt);
+    max-width: 16rem;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo a{
+    font-size: 42px;
+    position: relative;
+}
+
+.logo a span{
+    height: 8px;
+    width: 8px;
+    background: var(--txt);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: -8px;
+}
+
+.menu a{
+    font-size: 22px;
+    transition: all 0.15s ease-in-out;
+}
+
+.menu a::after, .menu a:hover{
+    color: var(--accent);
+}
+
+.menu ul li{
+    margin: 32px 0;
+}
+
+.socials{
+    width: 100%;
+}
+
+.socials ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.socials ul li a i{
+    font-size: 28px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.socials ul li a:hover i{
+    transform: translateY(-30%);
 }
