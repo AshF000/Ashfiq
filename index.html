@@ -11,6 +11,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
 
     <title>Ashfiq</title>
@@ -52,204 +58,88 @@
     </nav>
 
     <main class="content">
-      <section id="home">Section 1 - Home</section>
-      <section id="skill">Section 2 - Skill</section>
-      <section id="contact">Section 3 - Contact</section>
-    </main>
-
-    <!--  -->
-    <!-- HOME SECTION -->
-    <section id="home">
-      <div class="home-container">
-        <div class="home-left">
-          <img src="your-image.jpg" alt="Your Photo" class="profile-pic" />
+      <!-- HOME SECTION -->
+      <!-- <section id="home">Section 1 - Home</section> -->
+      <!-- 
+      <section id="home">
+        <div class="home-container">
+          <div class="home-left">
+            <img src="img/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" alt="My photo" class="profile-pic" />
+          </div>
+          <div class="home-right">
+            <h1>Ashfiq Islam</h1>
+            <h4>
+             A student exploring full-stack development, with a focus on building user-friendly web experiences. I enjoy learning by doing and improving my problem-solving through code.
+            </h4>
+            <a href="files/resume.txt" download class="btn-resume"
+              >Resume</a
+            >
+          </div>
         </div>
-        <div class="home-right">
-          <h1>Hello, I'm Ashfiq</h1>
-          <p>
-            I’m a passionate developer with interest in full-stack development,
-            design, and building modern web applications. I enjoy learning new
-            technologies and solving real-world problems through code.
-          </p>
-          <a href="Ashfiq-Resume.pdf" download class="btn-resume"
-            >Download Resume</a
+      </section>
+       -->
+
+      <!-- <section id="skill">Section 2 - Skill</section> -->
+      <section id="skill">
+        <div class="skill-head">
+          <h3>Skills & Projects</h3>
+        </div>
+      </section>
+
+
+      <!-- <section id="contact">Section 3 - Contact</section> -->
+       <!-- 
+      <section id="contact">
+        <div class="contact-head">
+          <h2>Contact Info</h2>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <ul>
+              <li>
+                <i class="bi bi-envelope"></i>
+                <a href="">ashfiq_islam@yahoo.com</a>
+              </li>
+              <li>
+                <i class="bi bi-whatsapp"></i>
+                <a href="">+880 1302 558111</a>
+              </li>
+              <li>
+                <i class="bi bi-geo-alt"></i>
+                <a href="">Dhaka, Bangladesh</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-boundary"></div>
+          <form
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            class="contact-form"
           >
+            <div class="form-divs form-name">
+              <label for="name">Name</label>
+              <input type="text" placeholder="Your Name" name="name" autofocus />
+            </div>
+            <div class="form-divs form-email">
+              <label for="email">Email</label>
+              <input type="text" placeholder="Your Email" name="email" />
+            </div>
+            <div class="form-divs form-msg">
+              <label for="msg">Message</label>
+              <textarea name="msg" id="msg" rows="6"></textarea>
+            </div>
+            <button>Send Message</button>
+
+          </form>
         </div>
-      </div>
-    </section>
-
-    <!-- SKILLS & PROJECTS SECTION -->
-    <section id="skill">
-      <div class="skills-projects-container">
-        <!-- SKILLS -->
-        <div class="skills">
-          <h2>Skills</h2>
-
-          <!-- Progress Bars -->
-          <div class="skill-bar">
-            <label>HTML</label>
-            <progress value="90" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>CSS</label>
-            <progress value="85" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>JavaScript</label>
-            <progress value="80" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>ReactJS</label>
-            <progress value="75" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>Bootstrap</label>
-            <progress value="70" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>Tailwind</label>
-            <progress value="70" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>C / C++</label>
-            <progress value="75" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>Java</label>
-            <progress value="70" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>Python</label>
-            <progress value="70" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>SQL</label>
-            <progress value="65" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>Go</label>
-            <progress value="60" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>Git</label>
-            <progress value="80" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>JavaFX</label>
-            <progress value="55" max="100"></progress>
-          </div>
-          <div class="skill-bar">
-            <label>Illustrator</label>
-            <progress value="60" max="100"></progress>
-          </div>
-
-          <!-- Skill Badges (optional) -->
-          <div class="skill-badges">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>ReactJS</span>
-            <span>Bootstrap</span>
-            <span>Tailwind</span>
-            <span>C</span>
-            <span>C++</span>
-            <span>Java</span>
-            <span>Python</span>
-            <span>SQL</span>
-            <span>Go</span>
-            <span>Git</span>
-            <span>JavaFX</span>
-            <span>Illustrator</span>
-          </div>
-        </div>
-
-        <!-- PROJECTS -->
-        <div class="projects">
-          <h2>Projects</h2>
-
-          <div class="project-card">
-            <img src="project1.jpg" alt="Project 1 Screenshot" />
-            <h3>Project One</h3>
-            <p>A short description of the project and what it does.</p>
-            <a
-              href="https://your-live-link.com"
-              target="_blank"
-              class="btn-project"
-              >View Live</a
-            >
-          </div>
-
-          <div class="project-card">
-            <img src="project2.jpg" alt="Project 2 Screenshot" />
-            <h3>Project Two</h3>
-            <p>This project showcases XYZ functionality using React or JS.</p>
-            <a
-              href="https://your-live-link.com"
-              target="_blank"
-              class="btn-project"
-              >View Live</a
-            >
-          </div>
-
-          <div class="project-card">
-            <img src="project3.jpg" alt="Project 3 Screenshot" />
-            <h3>Project Three</h3>
-            <p>Optional third project with cool design or animation.</p>
-            <a
-              href="https://your-live-link.com"
-              target="_blank"
-              class="btn-project"
-              >View Live</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-      <div class="contact-container">
-        <!-- Contact Info -->
-        <div class="contact-info">
-          <h2>Contact Me</h2>
-          <p>
-            Email:
-            <a href="mailto:your.email@example.com">your.email@example.com</a>
-          </p>
-          <p>Location: Your City, Country</p>
-          <div class="social-links">
-            <a href="https://github.com/yourusername" target="_blank"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a href="https://twitter.com/yourprofile" target="_blank"
-              ><i class="fa-brands fa-twitter"></i
-            ></a>
-          </div>
-        </div>
-
-        <!-- Contact Form -->
-        <form
-          action="https://formspree.io/f/YOUR_FORM_ID"
-          method="POST"
-          class="contact-form"
-        >
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea
-            name="message"
-            rows="6"
-            placeholder="Your Message"
-            required
-          ></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-
-    <!--  -->
+      </section>
+    -->
+    </main>
   </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"
+  ></script>
   <script src="script.js"></script>
 </html>
