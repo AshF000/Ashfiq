@@ -255,6 +255,7 @@ textarea#msg {
   font-size: 1.1rem;
   font-weight: 300;
   letter-spacing: normal;
+  resize: none;
 }
 
 .contact-form button {
